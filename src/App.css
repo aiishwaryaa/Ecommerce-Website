@@ -1,0 +1,1751 @@
+/* src/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+/* Set default font for the whole site */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+/* Set a different font for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Edu AU VIC WA NT Hand', cursive;
+  font-weight: 700;
+}
+
+/* Apply Quicksand to certain sections (optional) */
+.quicksand-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #5e0241;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.navbar .logo h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 60px;
+}
+.navlogoimg{
+  width: 150px;
+  height: 140px;
+  margin-top: -20px;
+  margin-left: 40px;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  
+}
+
+.search-bar input {
+  padding: 8px;
+  font-size: 1rem;
+  margin-left: 0px;
+  background: transparent;
+  border: none ;
+  border-bottom:2px solid white ;
+  border-radius: 10px;
+  color: white;
+  margin-top: -40px;
+  
+  
+}
+.search-bar input::placeholder {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+input:focus{
+  outline: none;
+}
+.search-bar .search-icon {
+  color: #5e0241;
+  font-size: 1.3rem;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  font-size: 1.3rem;
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+}
+
+
+
+/* Icons inside navigation */
+.nav-links li a svg {
+  margin-right: 8px;
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* My Account Dropdown */
+.account-button {
+  background: none !important;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  margin-top: -32px;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+ 
+
+}
+.account-button:hover{
+  background-color: none !important;
+}
+.account-box {
+  position: absolute;
+  top: 90px;
+  right: 160px;
+  width: 150px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+
+.dropdown-button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 25px;
+  background-color: #5e0241;
+  color: white;
+  border: none;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: large;
+  cursor: pointer;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 4px;
+  background-color: goldenrod;
+  border-radius: 5px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #720a41;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 4;
+    padding: 20px;
+    margin-top: -70px;
+   
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+/* ..................home................................ */
+
+/* General styling for the Home component */
+.home {
+  font-family: Arial, sans-serif;
+}
+
+/* Carousel */
+.carousel-section img {
+  max-height: 600px;
+  object-fit: cover;
+}
+.caption{
+  text-shadow: 5px 5px 2px#1a1a1a;
+  font-size: 50px;
+}
+/* Product Cards Section */
+.product-cards-section {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 300px; /* Default width for larger screens */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #5f0538;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #33021f;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 220px; /* Smaller width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 200px; /* Even smaller width for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    width: 90%; /* Card takes up 90% width on very small screens */
+  }
+}
+
+
+/* khas nageene Section */
+.special-items-section {
+  text-align: center;
+  padding: 50px 0;
+  
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.special-items {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+/* Aapke Liye Hamaari Khaas Peshkash */
+.item-card {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-card h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.item-card p {
+  font-size: 1rem;
+}
+
+/* Responsive Styles for Special Items Section */
+@media (max-width: 768px) {
+  .special-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Aapki khaasiyat ke hisaab se chune gaye item! */
+.handpicked-product-cards {
+  display: flex;
+  gap: 15px; /* Reduced gap for a more compact layout */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.handpicked-product-card {
+  width: 100%;
+  max-width: 300px; /* Smaller max width for a more compact size */
+  flex: 1 1 auto;
+  padding: 15px; /* Adjust padding as needed */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.handpicked-product-card img {
+  width: 100%;
+  height: 200px; /* Smaller image height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.handpicked-product-card h5 {
+  font-size: 1.1rem; /* Adjusted font size for titles */
+  margin: 10px 0;
+}
+
+.handpicked-product-card p {
+  font-size: 0.9rem; /* Smaller text for descriptions */
+  color: #555;
+  
+}
+
+.handpicked-product-card .price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.handpicked-product-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #55052f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.handpicked-product-card button:hover {
+  background-color: #410227;
+}
+
+
+/* Chamakti Dharohar */
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: none;
+  border-top: 2px solid#720a41;
+  border-bottom:2px solid #720a41;
+  padding: 20px;
+  border-radius: 10px;
+}
+.image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 30px !important;
+  
+}
+
+.fixed-image {
+  width: 100%; /* Adjusts to the container's full width */
+  max-width: 500px !important; /* Fixed width */
+  height: 600px !important; /* Fixed height */
+  object-fit: cover; /* Ensures the image fills the area without stretching */
+  border-radius: 8px; /* Optional: rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition */
+  margin: 0;
+}
+.fixed-image:hover {
+  transform: scale(1.1); /* Scales up the image by 10% */
+}
+
+.about-ratnam-section {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.about-ratnam-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-ratnam-section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.shopping-at-ratnam,
+.vision-section {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-at-ratnam h3,
+.vision-section h3 {
+  font-size: 1.5rem;
+  color: #63052f;
+  margin-bottom: 1rem;
+}
+
+.vision-section p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-ratnam-section {
+    padding: 1rem;
+  }
+
+  .shopping-at-ratnam,
+  .vision-section {
+    padding: 1rem;
+  }
+}
+
+
+/* ....................................Naye aagaman ki raunak dekhein! ......................................................................*/
+.product-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+/* Each Product Card */
+.product-card {
+  flex: 1 1 calc(25% - 15px);  /* Makes sure each card takes 25% of the row */
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: scale(1.05);  /* Adds hover effect */
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #777;
+}
+
+.product-rating {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #f39c12;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #108cc1;  /* Blue color for price */
+}
+
+/* Heading for product slider */
+.slider-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px; /* Adds space between the heading and the slider */
+  color: #333; /* You can customize the color */
+  margin-top: 30px !important;
+}
+
+
+/* ...............................POSTER...................... */
+/* Container for the jewelry poster */
+.jewelry-poster-container {
+  width: 100%;
+  height: 500px; /* Default height, adjust as needed */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Image styling for the jewelry poster */
+.jewelry-poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .jewelry-poster-container {
+    height: 250px; /* Adjust height for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .jewelry-poster-container {
+    height: 200px; /* Adjust height for mobile screens */
+  }
+}
+                                     /* poster popup */
+/* Style for the overlay */
+.poster-popup-overlay {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Make sure the popup appears on top */
+}
+
+/* Style for the content container */
+.poster-popup-content {
+  background:transparent; /* You can change this to any color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the image */
+.poster-image {
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  max-width: 600px; /* Maximum width */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensures the image is properly scaled */
+}
+
+/* Add hover effect if desired */
+.poster-popup-overlay:hover {
+  cursor: pointer; /* Shows a pointer cursor when hovering over the overlay */
+}
+
+/* VideoSection.css */
+/* VideoSection.css */
+
+.video-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: #2f2e2e;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(85, 3, 42);
+}
+.b1{
+  position: relative;
+  left: 120px;
+  margin-bottom: 40px;
+}
+.b2{
+  position: relative;
+  right : 120px;
+  margin-bottom: 40px;
+  }
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the entire video fits within the container */
+  object-position: center; /* Center the video within the container */
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .video-section {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .video-section {
+    background: white;
+  }
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+  .video-section {
+    background: white;
+  }
+  .video-section {
+    height: 40vh;
+  }
+}
+
+
+
+/* ...............................FOOTER...................................... */
+
+/* Footer Styles */
+
+.footer{
+  margin-top: -70px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-logo {
+  width: 300px;
+  height: 260px;
+ margin-left: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: -130px;
+  margin-top: -150px;
+  font-family: 'Arial', sans-serif;
+}
+
+.brand-description {
+  font-size: 1.3rem;
+  margin: 10px 0 30px;
+  color: #c7a0dc;
+  
+}
+
+.hindides{
+  margin-top: -90px;
+  line-height: 2;
+}
+/* Footer Sections */
+/* Footer container */
+footer {
+  background-color: #5e0241;
+  color: white;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Footer Sections */
+.fborder1, .fborder2 {
+  width:300px;  /* Adjust the width of the border images as per your preference */
+  height:250px; /* Maintain the aspect ratio of the images */
+  margin: 0px; /* Adjust the spacing between the images and the text */
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 8px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #c879f3;
+}
+
+.important-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.important-links li {
+  margin: 10px 0;
+}
+
+.important-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.important-links a:hover {
+  color: #c879f3;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 8px;
+  width: 80%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.newsletter-form button {
+  background-color: #d299f1;
+  color: #5e0241;
+  padding: 8px 16px;
+  width: 200px ;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #c879f3;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.contact-form button {
+  background-color: #c879f3;
+  color: #5e0241;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #c879f3;
+}
+
+.footer-content p {
+  margin-top: 40px;
+  color: #f1f1f1;
+}
+
+
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .footer-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-icons {
+    margin-bottom: 20px;
+  }
+}
+            /*....... .................................CART PAGE..................................... */
+
+/* Overall container for the gradient background */
+.gradient-custom {
+  background: #60022b; /* Fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(120, 10, 63), rgb(123, 31, 176)); /* For Safari 5.1+ */
+  background: linear-gradient(45deg, rgb(55, 6, 70), white, rgb(79, 3, 46)); /* W3C standard for all browsers */
+  height: 100vh;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.card-header {
+  background-color: #f8f9fa;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Cart item row styling */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Cart item image */
+.bg-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Cart item text */
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Buttons for Remove and Move to Wish List */
+.btn {
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  background-color: rgb(79, 3, 46); /* Primary button color */
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(67, 2, 41); /* Darker shade for hover effect */
+}
+
+.btn-danger {
+  background-color: #e74c3c; /* Delete button color (Red) */
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b; /* Darker red for hover effect */
+}
+
+.btn-warning {
+  background-color: #f39c12; /* Favorite button color (Yellow) */
+  color: white;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e67e22; /* Darker yellow for hover effect */
+}
+
+.btn-sm {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+}
+
+.me-1 {
+  margin-right: 0.5rem;
+}
+
+/* Quantity control button */
+.btn-primary.px-3 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.form-outline {
+  display: flex;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 60px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="number"]:focus {
+  border-color: #108cc1;
+}
+
+/* Price styling */
+.text-start.text-md-center {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Shipping & Summary section */
+.card-body p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card-body img {
+  margin-right: 0.5rem;
+}
+
+/* Summary box for total */
+.list-group-item {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.list-group-item span {
+  font-weight: bold;
+}
+
+.list-group-item:last-child {
+  border: none;
+  font-size: 1.2rem;
+}
+
+/* Checkout Button */
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: rgb(79, 3, 46); /* Primary button color */
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn-lg:hover {
+  background-color: rgb(67, 2, 41); /* Darker shade for hover effect */
+}
+
+/* Shipping delivery and payment acceptance cards */
+.card-body img {
+  width: 45px;
+}
+
+.card-body p {
+  font-weight: 600;
+}
+
+.card-body .text-md-center {
+  text-align: center;
+}
+.checkout{
+  background: rgb(79, 3, 46) !important;
+  color: white !important;
+}
+.delete{
+  background: green !important;
+  color: white !important;
+}
+/* Small responsiveness adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-8, .col-md-4 {
+    margin-bottom: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .list-group-item {
+    font-size: 1rem;
+  }
+}
+
+
+/* ,,,,,,,,,,,,,,,..............,,STOREPAGE,................,,,,,,,,,,,,,,,,,,,,,,,, */
+/* Store.css */
+
+.store-page {
+  padding: 20px;
+}
+.storeheading{
+  color: #500729;
+}
+/* Bottom bar styling */
+.bottom-bar {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  position: sticky;
+  top: 60px; /* Adjust this based on navbar height */
+  z-index: 999;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin: 5px 10px;
+  margin-top: 10px;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.category-list a:hover {
+  color: #6f0543 !important;
+  cursor: pointer;
+}
+
+/* When screen width is less than 768px, set position to static */
+.static-position {
+  position: static !important;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .category-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* items as per category -->>( product cards ) */
+/* Store Section */
+
+.product-image-container {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.wishlist-btn {
+  position: absolute;
+  width: 60px;
+  top: -10px;
+  right: -2px;
+  background: transparent !important;
+  padding: 8px;
+  color: #4f0226 !important;
+  font-size: 30px;
+  border-radius: 50%; /* Circular button */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.wishlist-btn:hover {
+  color: goldenrod !important;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between buttons */
+  justify-content: center;
+}
+
+.add-to-cart-btn-animated {
+  background-color: #108cc1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn-animated:hover {
+  background-color: #0a6fa1; /* Darker shade on hover */
+  transform: scale(1.1); /* Button grows slightly */
+}
+
+.wishlist-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.wishlist-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wishlist-product-card {
+  width: 300px;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.remove-from-wishlist-btn {
+  background-color: #58073d;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-from-wishlist-btn:hover {
+  background-color: #865613;
+}
+
+.go-back-to-store {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 16px;
+  color: #420321 !important;
+  text-decoration: none;
+}
+
+.go-back-to-store:hover {
+  text-decoration: none;
+
+}
+
+/* .........................LOGIN............................ */
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    padding: 10px;
+  }
+
+  .benefits-card, .login-card {
+    max-width: 100%; /* Full width on smaller screens */
+    box-shadow: none; /* Optional: remove shadow on smaller screens */
+  }
+
+  .benefits-card img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+}
+
+.benefits-card, .login-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-card {
+  text-align: center;
+  max-width: 400px;
+}
+
+.benefits-card img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.benefits-card .discount {
+  font-size: 1.5em;
+  color: #500729;
+}
+
+.benefits-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.login-card {
+  max-width: 350px;
+}
+
+.login-card h2 {
+  font-size: 1.5em;
+  color: #6b0937;
+  text-align: center;
+}
+
+.login-card p {
+  margin-top: 5px;
+  color: #333232;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #6b0937;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6b0937;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #38021b;
+}
+
+.terms {
+  margin-top: 20px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #888;
+}
+
+.terms a {
+  color: #8a0543;
+  text-decoration: none;
+}
+
+/* .....................................SIGNUP......................................... */
+/* Signup Form Container */
+.signup-form-container {
+  display: flex;
+  justify-content:center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgb(241, 221, 208);
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* Signup Benefits Card */
+.signup-benefits-card {
+  width: 80%;
+  padding: 1.5rem;
+  background-color: #f8f8f8; /* Light background for the signup card */
+  border-radius: 8px; /* Rounded corners */
+   /* Space between the form and the benefits card */
+}
+.signupimg{
+  width: 100%;
+
+}
+.signup-benefits-card h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.signup-benefits-card p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #5a031d;
+}
+
+.signup-benefits-card ul {
+  list-style-type: none; /* Removes default list bullets */
+  padding-left: 0;
+}
+
+.signup-benefits-card li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem; /* Space between each list item */
+}
+
+/* Signup Card */
+.signup-card {
+  width: 50%;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-left: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-card h2 {
+  font-size: 2rem;
+  color: #610429;
+  text-align: center;
+}
+
+.signup-input-group {
+  margin-bottom: 2rem;
+}
+
+.signup-input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: none;
+  border-bottom:2px solid #63052f !important;
+}
+
+.signup-submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #580528;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-submit-btn:hover {
+  background-color:#2d0214 ;
+}
+
+.signup-terms {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.signup-terms a {
+  text-decoration: none;
+  color: #5a031d;
+}
+
+/* ...................PRODUCT DETAILS PAGE...................................................................... */
+/* Container for the product details */
+/* Main container styling */
+.product-page {
+  padding: 20px;
+}
+
+.main-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Details Section */
+.product-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-image-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.main-product-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.thumbnail-gallery img {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.product-info-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.product-info-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  color: #95073b;
+}
+
+.product-options label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.buy-now-button {
+  display: block;
+  margin-top: 30px !important;
+  padding: 10px 20px;
+  background-color: #520a29;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+  width: 300px;
+}
+
+.buy-now-button:hover {
+  background-color: #7d1842;
+}
+
+/* Description Section */
+.product-description {
+  margin-top: 30px;
+}
+
+
+
+/* Review Section */
+.product-reviews {
+  margin-top: 30px;
+}
+
+
+
+.rating-stars {
+  margin-bottom: 10px;
+  
+}
+
+.rating-stars .star {
+  font-size: 30px;
+  cursor: pointer;
+  color: #a4a3a3;
+}
+
+.rating-stars .star.filled {
+  color: gold;
+}
+
+.customer-review {
+  margin: 10px 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column;
+  }
+
+  .thumbnail-gallery img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+}
+
+
+/* icons section */
+.icons-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.icon-card {
+  text-align: center;
+  padding: 15px;
+  width: 130px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(64, 3, 26, 0.5);
+}
+.icon-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.icon-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a041e;
+}
+@media (max-width: 768px) {
+  .icon-card {
+    width: 130px;
+  }
+  .icon-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .icon-card p {
+    font-size: 12px;
+  }
+
+
+  .product-details-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align for better aesthetics */
+  }
+
+  .product-image-section,
+  .product-info-section {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .thumbnail-gallery img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .buy-now-button {
+    width: 100%; /* Full-width button */
+  }
+
+  .icons-section {
+    flex-direction: column;
+    gap: 10px; /* Reduce gap between cards */
+  }
+
+  .icon-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .product-description,
+  .product-reviews {
+    text-align: center; /* Center-align text for better readability */
+    padding: 10px; /* Add padding for spacing */
+  }
+}
+
+/* General padding and spacing adjustments */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  h2,
+  h3 {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}
